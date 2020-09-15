@@ -9,7 +9,15 @@
 <body>
     
     <div class="login-area">
-        
+        <form method="POST">
+            <input type="email" name="email" placeholder="Digite seu e-mail" />
+            <input type="password" name="password" placeholder="Digite sua senha" />
+            <input type="submit" value="Entrar" /><br />
+            <?php if (isset($error) && !empty($error)): ?>
+                <div class="warning"><?= $error; ?></div>
+                <!-- warning -->
+            <?php endif; ?>
+        </form>
     </div>
     <!-- login-area -->
 </body>
